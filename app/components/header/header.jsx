@@ -12,29 +12,23 @@ function Header() {
         <div className='headerContainer'>
             <div className='logoSection'>
                 <div className='leftLogo'>
-                    <menu onClick={() => setShowMenu(!showMenu)} className='menuItems'>
+                    <h2 onClick={() => setShowMenu(!showMenu)} className='menuItems'>
                         {<CiMenuBurger />}
-                    </menu>
+                    </h2>
                     <h2 className='leftLogoIcon'>
                         {<GrAd />}
                     </h2>
                 </div>
-
                 <div className='logoName'>
                     <h2>LOGO</h2>
                 </div>
-
                 <div className='rightIcons'>
-                    <div className='icons'>
-                        <h2 className='searchIcon'> {<CiSearch />} </h2>
-                        <h2 className='heartIcon'> {<CiHeart />} </h2>
-                        <h2 className='shoppingBasket'> {<CiShoppingBasket />} </h2>
-                        <h2 className='userIcon'> {<CiUser />} </h2>
-                    </div>
+                    <h2 className='searchIcon'> {<CiSearch />} </h2>
+                    <h2 className='heartIcon'> {<CiHeart />} </h2>
+                    <h2 className='shoppingBasket'> {<CiShoppingBasket />} </h2>
+                    <h2 className='userIcon'> {<CiUser />} </h2>
                 </div>
-
             </div>
-
             <div className={showMenu ? 'subMenus' : 'downMenu'}>
                 <h4>SHOP</h4>
                 <h4>SKILLS</h4>
@@ -44,7 +38,7 @@ function Header() {
             </div>
 
         </div>
-            
+
     )
 }
 

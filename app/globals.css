@@ -14,6 +14,7 @@
 }
 
 .leftLogo {
+  display: flex;
   flex: 1;
   text-align: left;
   padding-left: 10px;
@@ -25,15 +26,14 @@
 }
 
 .rightIcons {
+  display: flex;
   flex: 1;
   text-align: right;
   padding-right: 10px;
-}
-.icons {
-  display: flex;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 3px;
 }
+
 .subMenus {
   display: flex;
   justify-content: center;
@@ -42,31 +42,18 @@
 }
 
 @media (max-width: 768px) {
-  .icons {
+  .menuItems{
     display: flex;
-    justify-content: flex-end;
-    gap: 10px;
   }
-  .searchIcon {
+  .logoSection {
+    padding: 5px;
+    padding-top: 10px;
+  }
+  .userIcon{
     display: none;
   }
-  .headerContainer {
-    padding: 10px;
-    padding-top: 15px;
-  }
-  /* .leftLogo {
-    display: flex;
-  } */
-  .leftLogoIcon {
-    display: none;
-  }
-  /* .menuItems {
-    display: block;
-  }
-  .subMenus {
-    display: none;
-    flex-direction: column;
-  } */
+  
+  
 }
 /* Header Component Styling end */
 
@@ -350,7 +337,7 @@
   border-radius: 0.5rem;
   width: 250px;
   height: 250px;
-  
+
 }
 
 .custom-card ul {
