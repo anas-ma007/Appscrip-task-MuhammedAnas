@@ -18,12 +18,12 @@ async function fetchDataServerSide() {
 async function FetchData() {
 
     const data = await fetchDataServerSide()
-  
+
     if (!data || data.length === 0) {
         const shimmerItems = Array.from({ length: 10 }, (_, index) => index);
         return (
             <React.Fragment>
-                <div className={{ display: 'flex', flexWrap: 'wrap' }}>
+                <div className="shimmer-container">
                     {shimmerItems.map((item) => (
                         <ShimmerHome key={item} />
                     ))}
@@ -33,17 +33,10 @@ async function FetchData() {
     } else {
         return (
             <React.Fragment>
-                <div className='tst'>
-                    <div className={{
-                        display: 'flex', flexWrap: 'wrap', paddingLeft: "10px",
-                        paddingRight: "10px"
-                    }}>
-                        {data?.map((product) => (
-                            <Link key={product.id} href="">  <ProductCards info={product} /> </Link>))}
-
-                    </div>
+                <div className="product-card-map-container">
+                    {data?.map((product) => (
+                        <Link key={product.id} href="">  < ProductCards info={product} /> </Link>))}
                 </div>
-
             </React.Fragment>
         )
     }

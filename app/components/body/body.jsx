@@ -13,7 +13,9 @@ function Body() {
       </div>
       <div className="bodyContents">
         <Sidebar />
-        <BodyContainer />
+        <div className="bodyContainer001">
+          <BodyContainer />
+        </div>
       </div>
     </div>
   );

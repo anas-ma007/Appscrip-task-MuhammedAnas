@@ -10,10 +10,10 @@ const ProductCards = ({ info }) => {
      
         <div className='custom-card'>
           <ul>
-            <li className='font-bold'>{title}</li>
-            <li>{"Category : " + category}</li>
+            <li className='title'>{title}</li>
+            <li className='category'>{"Category : " + category}</li>
             <img className='img' src={image} alt={title} />
-            <li className='text-xs'>{price} USD</li>
+            <li className='price'>{price} USD</li>
           </ul>
         </div>
 
