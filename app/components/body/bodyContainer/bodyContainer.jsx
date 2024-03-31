@@ -3,9 +3,9 @@ import FetchData from './fetchData/fetchData'
 
 function BodyContainer() {
     return (
-        <div className="fetch-data-container">
+        <>
             <FetchData />
-        </div>
+        </>
     )
 }
 
