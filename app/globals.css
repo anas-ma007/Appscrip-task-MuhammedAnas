@@ -44,7 +44,7 @@
 .downMenu {
   position: absolute;
   background-color: #ffffff;
-  box-shadow: #070707;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   padding-left: 3px;
 }
 
@@ -61,6 +61,10 @@
   }
   .subMenus {
     display: none;
+  }
+
+  .sidebar{
+    position: absolute;
   }
 }
 
@@ -135,6 +139,7 @@
 
 .bodyContents {
   display: flex;
+  position: relative;
 }
 
 /* sidebar componennt styling start here */
@@ -142,7 +147,9 @@
   display: flex;
   align-items: center;
   margin-top: 0.5rem;
+
 }
+
 
 .customizable-option input[type="checkbox"] {
   margin-right: 0.5rem;

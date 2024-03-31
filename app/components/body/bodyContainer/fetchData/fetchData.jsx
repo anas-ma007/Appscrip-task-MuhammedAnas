@@ -15,10 +15,10 @@ async function fetchDataServerSide() {
 }
 
 
-async function FetchData() {
-
+ async function FetchData() {
     const data = await fetchDataServerSide()
-
+    console.log(data);
+    // console.log(data.length , "data length");
     if (!data || data.length === 0) {
         const shimmerItems = Array.from({ length: 10 }, (_, index) => index);
         return (
@@ -28,7 +28,7 @@ async function FetchData() {
                 ))}
             </div>
         )
-    } else {
+    } else   {
         return (
             <div className='prodcut-cards-class'>
                 {data?.map((product) => (
