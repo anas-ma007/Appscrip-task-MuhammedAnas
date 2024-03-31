@@ -18,6 +18,7 @@
   flex: 1;
   text-align: left;
   padding-left: 10px;
+  position: relative;
 }
 
 .logoName {
@@ -40,21 +41,39 @@
   gap: 30px;
   padding: 20px;
 }
+.downMenu {
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: #070707;
+  padding-left: 3px;
+}
 
 @media (max-width: 768px) {
-  .menuItems{
+  .menuItems {
     display: flex;
   }
   .logoSection {
     padding: 5px;
     padding-top: 10px;
   }
-  .userIcon{
+  .userIcon {
     display: none;
   }
-  
-  
+  .subMenus {
+    display: none;
+  }
 }
+
+@media (min-width: 768px) {
+  .downMenu {
+    display: none;
+  }
+
+  .subMenus {
+    display: flex;
+  }
+}
+
 /* Header Component Styling end */
 
 /* DescriptionHeader Component Styling start*/
@@ -337,7 +356,6 @@
   border-radius: 0.5rem;
   width: 250px;
   height: 250px;
-
 }
 
 .custom-card ul {

@@ -7,7 +7,7 @@ import DescriptionHeader from './descriptionHeading/descriptionHeading';
 
 function Header() {
 
-    const [showMenu, setShowMenu] = useState(true);
+    const [showMenu, setShowMenu] = useState(false);
     return (
         <div className='headerContainer'>
             <div className='logoSection'>
@@ -29,7 +29,17 @@ function Header() {
                     <h2 className='userIcon'> {<CiUser />} </h2>
                 </div>
             </div>
-            <div className={showMenu ? 'subMenus' : 'downMenu'}>
+            {showMenu &&
+                <div className='downMenu'>
+                    <h4 style={{ padding: '5px 10px' }}>SHOP</h4>
+                    <h4 style={{ padding: '5px 10px' }}>SKILLS</h4>
+                    <h4 style={{ padding: '5px 10px' }}>STORIES</h4>
+                    <h4 style={{ padding: '5px 10px' }}>ABOUT</h4>
+                    <h4 style={{ padding: '5px 10px' }}>CONTACT US</h4>
+                    <h4 style={{ padding: '5px 10px' }} className='userIcon'> {<CiUser />} Login </h4>
+                </div>
+            }
+            <div className='subMenus'>
                 <h4>SHOP</h4>
                 <h4>SKILLS</h4>
                 <h4>STORIES</h4>
@@ -37,7 +47,7 @@ function Header() {
                 <h4>CONTACT US</h4>
             </div>
 
-        </div>
+        </div >
 
     )
 }
