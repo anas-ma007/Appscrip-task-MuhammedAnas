@@ -3,7 +3,7 @@ import FetchData from './fetchData/fetchData'
 
 function BodyContainer() {
     return (
-        <div className={{display :'flex'}}>
+        <div className="fetch-data-container">
             <FetchData />
         </div>
     )

@@ -1,11 +1,10 @@
-
 import React from 'react'
 import ShimmerHome from './shimmerCard';
 import Link from 'next/link';
 import ProductCards from './productCard';
-
-
 const { PRODUCTS_API } = require("@/app/utils/constants");
+
+
 
 async function fetchDataServerSide() {
     const res = await fetch(PRODUCTS_API)
@@ -17,8 +16,9 @@ async function fetchDataServerSide() {
 
 
 async function FetchData() {
-    const data = await fetchDataServerSide()
 
+    const data = await fetchDataServerSide()
+  
     if (!data || data.length === 0) {
         const shimmerItems = Array.from({ length: 10 }, (_, index) => index);
         return (
@@ -31,17 +31,19 @@ async function FetchData() {
             </React.Fragment>
         )
     } else {
-        console.log(data[0], "Console.log data[0] ");
         return (
             <React.Fragment>
-                <div className={{
-                    display: 'flex', flexWrap: 'wrap', paddingLeft: "10px",
-                    paddingRight: "10px"
-                }}>
-                    {data?.map((product) => (
-                        <Link key={product.id} href="">  <ProductCards info={product} /> </Link>))}
+                <div className='tst'>
+                    <div className={{
+                        display: 'flex', flexWrap: 'wrap', paddingLeft: "10px",
+                        paddingRight: "10px"
+                    }}>
+                        {data?.map((product) => (
+                            <Link key={product.id} href="">  <ProductCards info={product} /> </Link>))}
 
+                    </div>
                 </div>
+
             </React.Fragment>
         )
     }

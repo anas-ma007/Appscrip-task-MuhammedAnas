@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import BodyHeader from "./bodyHeader/bodyHeader";
 import Sidebar from "./BodySidebar/sidebar";
@@ -9,10 +11,9 @@ function Body() {
       <div className="bodyHeader">
         <BodyHeader />
       </div>
-
       <div className="bodyContents">
-        <Sidebar/>
-        <BodyContainer/>
+        <Sidebar />
+        <BodyContainer />
       </div>
     </div>
   );

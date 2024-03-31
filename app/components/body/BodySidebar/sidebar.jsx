@@ -1,10 +1,17 @@
+
 import React from 'react';
 import Link from 'next/link';
-// import './Sidebar.css'; 
+import { menuState } from '@/app/state/atoms/menuOpenState';
+import { useRecoilState } from 'recoil';
+
 
 function Sidebar() {
-  return (
-    <React.Fragment>
+
+const [isMenuOpen, setIsMenuOpen] = useRecoilState(menuState)
+
+if (!isMenuOpen)return null
+return (
+      <React.Fragment> 
       <div className='sidebar'>
         <div>
           <Link href={"/"}>

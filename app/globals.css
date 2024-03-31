@@ -54,19 +54,19 @@
     padding: 10px;
     padding-top: 15px;
   }
-  .leftLogo {
+  /* .leftLogo {
     display: flex;
-  }
+  } */
   .leftLogoIcon {
     display: none;
   }
-  .menuItems {
+  /* .menuItems {
     display: block;
   }
   .subMenus {
     display: none;
     flex-direction: column;
-  }
+  } */
 }
 /* Header Component Styling end */
 
@@ -305,7 +305,7 @@
 
 /* Body Main Container Styling starts from here  */
 
-/* Shimmer UI styling  start*/
+/* Shimmer UI styling start*/
 .custom-box {
   margin: 0.5rem;
   padding: 0.5rem;
@@ -338,18 +338,23 @@
 /* Shimmer UI styling  end*/
 
 
-/* product card  end*/
+/* product card styling starts from here*/
 .custom-card {
   margin: 0.5rem;
   padding: 0.5rem;
-  width: 24rem;
+  width: 22rem;
+  color: black;
+  text-decoration: none;
+  align-items: center;
+  /* justify-content: center; */
   display: flex;
-  flex-wrap: wrap-reverse;
+  /* flex-wrap: wrap-reverse; */
+  text-align: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .custom-card:hover {
-  width: 24.5rem;
+  width: 22.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
@@ -374,5 +379,9 @@
 /* product card  end*/
 
 
+.fetch-data-container{
+  display: grid;
+  row-gap: 50px;
+}
 
-/* Body Main Container Styling starts from here  */
+/* Body Main Container Styling end here  */

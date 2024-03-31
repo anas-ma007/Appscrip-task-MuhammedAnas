@@ -13,7 +13,6 @@ function Header() {
             <div className='logoSection'>
                 <div className='leftLogo'>
                     <menu onClick={() => setShowMenu(!showMenu)} className='menuItems'>
-                        {console.log(showMenu, "showMenu boolean log")}
                         {<CiMenuBurger />}
                     </menu>
                     <h2 className='leftLogoIcon'>

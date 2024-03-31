@@ -1,15 +1,18 @@
-import React from 'react';
-// import './BodyHeader.css'; // Importing the separate CSS file
+
+import { menuState } from '@/app/state/atoms/menuOpenState';
+import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
 
 function BodyHeader() {
+
+    const [isMenuOpen, setIsMenuOpen] = useRecoilState(menuState)
     return (
         <div className='body-header-container'>
             <div className='left-body-header-area'>
                 <p>Total Counts</p>
-                <button>HIDE ITEMS or SHOW ITEMS</button>
+                <button onClick={() => setIsMenuOpen(!isMenuOpen)} > {isMenuOpen ? "Hide Filter" : "Show Filter"}</button>
             </div>
             <div className='right-body-header-area'>
-                {/* <label htmlFor="products">RECOMMENDED: </label> */}
                 <select name="sort" id="sort">
                     <option value="date">Newest First</option>
                     <option value="star">Popular</option>
